@@ -1,4 +1,3 @@
-import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
 import UnoCSS from "@unocss/astro";
 import icon from "astro-icon";
@@ -17,8 +16,7 @@ export default defineConfig({
     sitemap(),
     robotsTxt({
       sitemap: [
-        "https://gianmarco.xyz/sitemap-index.xml",
-        "https://gianmarco.xyz/sitemap-0.xml",
+        "https://vichango.github.io/sitemap-index.xml",
       ],
     }),
     solidJs(),
@@ -29,8 +27,8 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
-  output: "server",
-  adapter: netlify({ edgeMiddleware: true }),
+  // output: "server",
+  // adapter: netlify({ edgeMiddleware: true }),
   vite: {
     assetsInclude: "**/*.riv",
   },
